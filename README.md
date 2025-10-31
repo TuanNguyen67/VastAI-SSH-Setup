@@ -1,10 +1,10 @@
 # WSL and VSCode SSH Setup Guide for connecting to [vast.ai](https://vast.ai/) (Windows 10)
 
-## Install and enable WSL
+## [Install and enable WSL](https://learn.microsoft.com/en-us/windows/wsl/setup/environment)
 
 
-## Install VSCode and extensions
-Install **Remote Development** extension.
+## [Install VSCode and extensions](https://code.visualstudio.com/docs/setup/setup-overview)
+- Install **Remote Development** extension.
 
 # Set up SSH for connecting to vast.ai
 ## 1. Checking for existing SSH keys
