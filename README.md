@@ -1,4 +1,4 @@
-# WSL and VSCode SSH Setup Guide for connecting to VastAI (Windows 10)
+# WSL and VSCode SSH Setup Guide for connecting to vast.ai (Windows 10)
 
 ## Install and enable WSL
 
@@ -6,7 +6,7 @@
 ## Install VSCode and extensions
 Install **Remote Development** extension.
 
-# Set up SSH for connecting to VastAI
+# Set up SSH for connecting to vast.ai
 ## 1. Checking for existing SSH keys
 Run this script in WSL terminal:
 ```bash
@@ -33,7 +33,7 @@ ssh-add ~/.ssh/id_ed25519
 ```
 
 
-## 4. Add public SSH key to VastAI
+## 4. Add public SSH key to vast.ai
 Run this script in WSL to read the SSH private key:
 ```bash
 cat ~/.ssh/id_ed25519.pub
@@ -67,7 +67,7 @@ Open '*User Settings JSON*' in VSCode and add the following script:
 ],
 ```
 
-## 6. Add VastAI SSH conection config
+## 6. Add vast.ai SSH conection config
 1. Go to https://cloud.vast.ai/create/ and rent a GPU.
 2. Click the '*Open terminal access*' button at the middle bottom GPU.
 3. At '*Direct ssh connect*' field you may see something like `ssh -p 51729 root@66.115.179.150 -L 8080:localhost:8080` which the `51729` is the port, `root` is the user, `66.115.179.150` is the HostName.
@@ -84,7 +84,7 @@ Host vastai
 ```
 
 
-## 7. Setup VastAI GPU server
+## 7. Setup vast.ai GPU server
 Open WSL terminal, and copy SSH private key:
 ```bash
 cat ~/.ssh/id_ed25519
@@ -120,11 +120,11 @@ bash miniconda.sh -b -p /opt/conda
 export PATH="/opt/conda/bin:$PATH"
 source /opt/conda/etc/profile.d/conda.sh
 ```
-In WSL terminal, copy *vastai_setup.sh* to VastAI Server by:
+In WSL terminal, copy *vastai_setup.sh* to vast.ai Server by:
 ```bash
 scp -r /mnt/<FolderPath>/vastai_setup.sh vastai:/workspace
 ```
-Connect VastAI via SSH: 
+Connect vast.ai via SSH: 
 ```bash
 ssh vastai
 ```
