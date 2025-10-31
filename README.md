@@ -41,7 +41,7 @@ cat ~/.ssh/id_ed25519.pub
 Go to https://cloud.vast.ai/manage-keys/ and then paste the key into the **SSH Keys** field.
 
 
-## 5. Setting WSL SSH in **VSCode**
+## 5. Setting WSL SSH in VSCode
 Create and save `ssh.bat` contain the following script: 
 ```bash
 @echo off
@@ -56,7 +56,7 @@ C:\Windows\System32\wsl.exe ssh %v_params%
 
 endlocal
 ```
-Open '*User Settings JSON*' in **VSCode** and add the following script:
+Open '*User Settings JSON*' in VSCode and add the following script:
 ```json
 "remote.SSH.path": "folder_path_contain_ssh_bat\\ssh.bat",
 "remote.SSH.showLoginTerminal": true,
@@ -68,7 +68,7 @@ Open '*User Settings JSON*' in **VSCode** and add the following script:
 ```
 
 ## 6. Add vast.ai SSH conection config
-1. Go to https://cloud.vast.ai/create/ and rent a GPU.
+1. Go to [vast.ai](https://cloud.vast.ai/create/) and rent a GPU.
 2. Click the '*Open terminal access*' button at the middle bottom GPU.
 3. At '*Direct ssh connect*' field you may see something like `ssh -p 51729 root@66.115.179.150 -L 8080:localhost:8080` which the `51729` is the port, `root` is the user, `66.115.179.150` is the HostName.
 4. Open **VSCode** (from *Start Menu* or *Explorer*).
@@ -89,7 +89,7 @@ Open WSL terminal, and copy SSH private key:
 ```bash
 cat ~/.ssh/id_ed25519
 ```
-Create file *vastai_setup.sh*:
+Create file `vastai_setup.sh`:
 ```bash
 # ======= Update lastest Ubuntu packages =======
 apt-get update
@@ -120,7 +120,7 @@ bash miniconda.sh -b -p /opt/conda
 export PATH="/opt/conda/bin:$PATH"
 source /opt/conda/etc/profile.d/conda.sh
 ```
-In WSL terminal, copy *vastai_setup.sh* to vast.ai Server by:
+In WSL terminal, copy `vastai_setup.sh` to vast.ai Server by:
 ```bash
 scp -r /mnt/<FolderPath>/vastai_setup.sh vastai:/workspace
 ```
