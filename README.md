@@ -41,7 +41,7 @@ cat ~/.ssh/id_ed25519.pub
 Go to https://cloud.vast.ai/manage-keys/ and then paste the key into the **SSH Keys** field.
 
 
-## 5. Setting WSL SSH in VSCode
+## 5. Setting WSL SSH in **VSCode**
 Create and save `ssh.bat` contain the following script: 
 ```bash
 @echo off
@@ -56,7 +56,7 @@ C:\Windows\System32\wsl.exe ssh %v_params%
 
 endlocal
 ```
-Open '*User Settings JSON*' in VSCode and add the following script:
+Open '*User Settings JSON*' in **VSCode** and add the following script:
 ```json
 "remote.SSH.path": "folder_path_contain_ssh_bat\\ssh.bat",
 "remote.SSH.showLoginTerminal": true,
