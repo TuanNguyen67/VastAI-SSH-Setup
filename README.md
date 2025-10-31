@@ -1,4 +1,3 @@
-
 # WSL and VSCode SSH Setup Guide for connecting to VastAI (Windows 10)
 
 ## Install and enable WSL
@@ -49,7 +48,7 @@ Create and save `ssh.bat` contain the following script:
 setlocal
 
 set v_params=%*
-set v_params=%v_params:\\wsl.localhost\Ubuntu\home\YourUserName=/home/YourUserName%
+set v_params=%v_params:\\wsl.localhost\Ubuntu\home\<YourUserName>=/home/<YourUserName>%
 set v_params=%v_params:\=/% 
 set v_params=%v_params:c:=/mnt/c%
 
@@ -61,7 +60,7 @@ Open '*User Settings JSON*' in VSCode and add the following script:
 ```json
 "remote.SSH.path": "folder_path_contain_ssh_bat\\ssh.bat",
 "remote.SSH.showLoginTerminal": true,
-"remote.SSH.configFile": "\\\\wsl.localhost\\Ubuntu\\home\\YourUserName\\.ssh\\config",
+"remote.SSH.configFile": "\\\\wsl.localhost\\Ubuntu\\home\\<YourUserName>\\.ssh\\config",
 "security.allowedUNCHosts": [
     "wsl$",
     "wsl.localhost"
@@ -73,7 +72,7 @@ Open '*User Settings JSON*' in VSCode and add the following script:
 2. Click the '*Open terminal access*' button at the middle bottom GPU.
 3. At '*Direct ssh connect*' field you may see something like `ssh -p 51729 root@66.115.179.150 -L 8080:localhost:8080` which the `51729` is the port, `root` is the user, `66.115.179.150` is the HostName.
 4. Open **VSCode** (from *Start Menu* or *Explorer*).
-5. `ctrl + shift + P`, type '*Remote-SSH: Open SSH Configuration file*'and choose *\\wsl.localhost\Ubuntu\home\<YourUserName>\.ssh\config*.
+5. `ctrl + shift + P`, type '*Remote-SSH: Open SSH Configuration file*'and choose '*\\\wsl.localhost\Ubuntu\home\<YourUserName>\.ssh\config*'.
 6. Add the bellow script:
 ```
 Host vastai
@@ -123,7 +122,7 @@ source /opt/conda/etc/profile.d/conda.sh
 ```
 In WSL terminal, copy *vastai_setup.sh* to VastAI Server by:
 ```bash
-scp -r /mnt/<folderPath>/vastai_setup.sh vastai:/workspace
+scp -r /mnt/<FolderPath>/vastai_setup.sh vastai:/workspace
 ```
 Connect VastAI via SSH: 
 ```bash
