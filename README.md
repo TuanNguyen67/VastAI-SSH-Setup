@@ -1,4 +1,4 @@
-# WSL and VSCode SSH Setup Guide for connecting to vast.ai (Windows 10)
+# WSL and VSCode SSH Setup Guide for connecting to [vast.ai](https://vast.ai/) (Windows 10)
 
 ## Install and enable WSL
 
