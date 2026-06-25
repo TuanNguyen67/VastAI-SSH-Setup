@@ -17,7 +17,7 @@ If you see files like `id_rsa` or `id_ed25519`, you may already have a key. You 
 ## 2. Generate new SSH key
 Run this script in WSL terminal:
 ```bash
-ssh-keygen -t ed25519 -C "youremail"
+ssh-keygen -t ed25519 -C "your-email"
 ```
 
 
