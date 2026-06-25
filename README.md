@@ -1,10 +1,9 @@
 # WSL and VSCode SSH Setup Guide for connecting to [vast.ai](https://vast.ai/) (Windows 10)
 
-## [Install and enable WSL](https://learn.microsoft.com/en-us/windows/wsl/setup/environment)
-
-
-## [Install VSCode and extensions](https://code.visualstudio.com/docs/setup/setup-overview)
-- Install **Remote Development** extension.
+require:
+- [Install and enable WSL](https://learn.microsoft.com/en-us/windows/wsl/setup/environment)
+- [Install VSCode and extensions](https://code.visualstudio.com/docs/setup/setup-overview)
+- Install **Remote Development** extension in VSCode.
 
 # Set up SSH for connecting to vast.ai
 ## 1. Checking for existing SSH keys
@@ -16,7 +15,7 @@ If you see files like `id_rsa` or `id_ed25519`, you may already have a key. You 
 
 
 ## 2. Generate new SSH key
-Run thí script in WSL terminal:
+Run this script in WSL terminal:
 ```bash
 ssh-keygen -t ed25519 -C "youremail"
 ```
