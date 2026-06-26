@@ -90,7 +90,7 @@ Host vastai
     HostName 66.115.179.150
     User root
     Port 51729
-    IdentityFile ~/.ssh/id_ed25519_vastai
+    IdentityFile C:/Users/PC/.ssh/id_ed25519_vastai
     IdentitiesOnly yes
 ```
 
