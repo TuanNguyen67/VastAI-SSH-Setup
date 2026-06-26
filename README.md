@@ -70,7 +70,15 @@ Open '*User Settings JSON*' in VSCode and add the following script:
 ],
 ```
 
-## 6. Add vast.ai SSH conection config
+## 6. Copy ssh key from wsl to windows
+Open *PowerShell* on Windows and run:
+```bash
+mkdir ~\.ssh\ -Forcemkdir ~\.ssh\ -Force
+cp \\wsl.localhost\Ubuntu\home\<your-user-name>\.ssh\id_ed25519 ~\.ssh\id_vastai
+```
+
+
+## 7. Add vast.ai SSH conection config
 1. Go to [vast.ai](https://cloud.vast.ai/create/) and rent a GPU.
 2. Click the '*Open terminal access*' button at the middle bottom GPU.
 3. At '*Direct ssh connect*' field you may see something like `ssh -p 51729 root@66.115.179.150 -L 8080:localhost:8080` which the `51729` is the port, `root` is the user, `66.115.179.150` is the HostName.
@@ -86,8 +94,7 @@ Host vastai
     IdentitiesOnly yes
 ```
 
-
-## 7. Setup vast.ai GPU server
+## 8. Setup vast.ai GPU server
 Open WSL terminal, and copy SSH private key:
 ```bash
 cat ~/.ssh/id_ed25519
