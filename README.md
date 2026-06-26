@@ -4,6 +4,10 @@ Requirements:
 - [Install and enable WSL](https://learn.microsoft.com/en-us/windows/wsl/setup/environment)
 - [Install VSCode and extensions](https://code.visualstudio.com/docs/setup/setup-overview)
 - Install *Remote Development* extension in VSCode.
+- Install SSH in WSL using:
+```bash
+sudo apt update && sudo apt install openssh-client -y
+```
 
 # Set up SSH for connecting to vast.ai
 ## 1. Checking for existing SSH keys
