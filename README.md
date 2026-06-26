@@ -74,7 +74,7 @@ Open '*User Settings JSON*' in VSCode and add the following script:
 Open *PowerShell* on Windows and run:
 ```bash
 mkdir ~\.ssh\ -Forcemkdir ~\.ssh\ -Force
-cp \\wsl.localhost\Ubuntu\home\<your-user-name>\.ssh\id_ed25519 ~\.ssh\id_vastai
+cp \\wsl.localhost\Ubuntu\home\<your-user-name>\.ssh\id_ed25519 ~\.ssh\id_ed25519_vastai
 ```
 
 
@@ -90,7 +90,7 @@ Host vastai
     HostName 66.115.179.150
     User root
     Port 51729
-    IdentityFile ~/.ssh/id_ed25519
+    IdentityFile ~/.ssh/id_ed25519_vastai
     IdentitiesOnly yes
 ```
 
